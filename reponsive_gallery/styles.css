@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {  
+    width: 20%;
+    position: relative;
+    transition: transform 800ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    display: block;
+}
+
+.container:focus,
+.container:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.test {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+li {
+    padding: 30px;
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+.middle-container {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+}
+
+.container:hover .middle-container  {
+    opacity: 1;
+}
+
+.logo {
+    width: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 80px 0;
+}
+
+@media only screen and (max-width: 1500px) {
+    .text {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .extra-item {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .container:focus,
+    .container:hover {
+        transform: none;
+        z-index: 1;
+    }
+
+    .text {
+        font-size: 26px;
+    }
+}
